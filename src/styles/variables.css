@@ -1,0 +1,11 @@
+/* src/styles/variables.css */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --bg-color: #ffffff;
+    --text-color: #1f2937;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-radius: 8px;
+}
