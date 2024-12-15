@@ -7,6 +7,7 @@
     <title>Hackathon 2024</title>
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body>
     <header class="header">
@@ -16,15 +17,64 @@
                 <a href="#about">Sobre el evento</a>
                 <a href="#schedule">Agenda</a>
                 <a href="#prizes">Premios</a>
-                <a href="#register" class="button">Registro</a>
+                <a href="#register" class="button button--primary">Registro</a>
             </div>
         </nav>
     </header>
 
     <main>
         <section id="hero" class="hero">
-            <h1>Hackathon 2024</h1>
-            <p>Construye el futuro en 48 horas</p>
+            <div class="hero__content">
+                <h1 class="hero__title fade-in">Hackathon 2024</h1>
+                <p class="hero__subtitle slide-up">Transforma tus ideas en realidad</p>
+                <div class="hero__cta fade-in-delay">
+                    <a href="#register" class="button button--large">¡Inscríbete ahora!</a>
+                    <p class="hero__date">15-17 Diciembre 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section__title">Sobre el evento</h2>
+                <div class="about__grid">
+                    <div class="about__card">
+                        <h3>48 Horas</h3>
+                        <p>De innovación y creatividad sin límites</p>
+                    </div>
+                    <div class="about__card">
+                        <h3>Mentores</h3>
+                        <p>Expertos de la industria para guiarte</p>
+                    </div>
+                    <div class="about__card">
+                        <h3>Networking</h3>
+                        <p>Conecta con otros desarrolladores</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title">Agenda</h2>
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <h3>Día 1</h3>
+                        <p>Registro y formación de equipos</p>
+                        <time>9:00 AM - Inicio</time>
+                    </div>
+                    <div class="timeline__item">
+                        <h3>Día 2</h3>
+                        <p>Desarrollo y mentorías</p>
+                        <time>Todo el día</time>
+                    </div>
+                    <div class="timeline__item">
+                        <h3>Día 3</h3>
+                        <p>Presentaciones y premiación</p>
+                        <time>3:00 PM - Cierre</time>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
