@@ -1,0 +1,19 @@
+/* src/styles/components/about.css */
+.about__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.about__card {
+    background: var(--card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.about__card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-shadow);
+}

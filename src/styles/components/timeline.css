@@ -1,0 +1,23 @@
+/* src/styles/components/timeline.css */
+.timeline {
+    margin-top: var(--spacing-xl);
+}
+
+.timeline__item {
+    position: relative;
+    padding: var(--spacing-lg);
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.timeline__item:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}

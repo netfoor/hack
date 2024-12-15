@@ -1,40 +1,94 @@
-<!-- src/index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon 2024</title>
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/hero.css">
+    <link rel="stylesheet" href="styles/components/about.css">
+    <link rel="stylesheet" href="styles/components/timeline.css">
+    <link rel="stylesheet" href="styles/components/animations.css">
+    <link rel="stylesheet" href="styles/components/responsive.css">
 </head>
 <body>
+    <!-- Header Navegación -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav__logo">Hackathon 2024</div>
-            <div class="nav__menu">
+        <header class="header">
+            <nav class="nav container">
+                <div class="nav__logo">Hackathon 2024</div>
+                
+                <!-- Menú Desktop -->
+                <div class="nav__menu">
+                    <a href="#about">Sobre el evento</a>
+                    <a href="#schedule">Agenda</a>
+                    <a href="#prizes">Premios</a>
+                    <a href="#register" class="button button--primary">Registro</a>
+                </div>
+        
+                <!-- Botón Móvil -->
+                <button class="nav__mobile-button" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        
+            <!-- Menú Móvil -->
+            <div class="nav__mobile">
                 <a href="#about">Sobre el evento</a>
                 <a href="#schedule">Agenda</a>
                 <a href="#prizes">Premios</a>
                 <a href="#register" class="button button--primary">Registro</a>
             </div>
-        </nav>
+        </header>
     </header>
 
     <main>
-        <section id="hero" class="hero">
-            <div class="hero__content">
-                <h1 class="hero__title fade-in">Hackathon 2024</h1>
-                <p class="hero__subtitle slide-up">Transforma tus ideas en realidad</p>
-                <div class="hero__cta fade-in-delay">
-                    <a href="#register" class="button button--large">¡Inscríbete ahora!</a>
-                    <p class="hero__date">15-17 Diciembre 2024</p>
+        <section class="hero" id="hero">
+            <!-- Background con partículas -->
+            <div class="hero__background">
+                <div class="grid-pattern"></div>
+                <div id="particles-js"></div>
+            </div>
+            
+            <!-- Contenido principal -->
+            <div class="hero__wrapper">
+                <div class="hero__content container">
+                    <!-- Badge de fecha -->
+                    <div class="tech-badge">15-17 DIC 2024</div>
+                    
+                    <!-- Título principal -->
+                    <h1 class="hero__title fade-in">Hackathon 2024</h1>
+                    <p class="hero__subtitle fade-in">48 horas para crear el futuro</p>
+                    
+                    <!-- Stats -->
+                    <div class="hero__stats">
+                        <div class="stat fade-in">
+                            <span class="stat__number">$50K</span>
+                            <span class="stat__label">EN PREMIOS</span>
+                        </div>
+                        <div class="stat fade-in">
+                            <span class="stat__number">300+</span>
+                            <span class="stat__label">HACKERS</span>
+                        </div>
+                        <div class="stat fade-in">
+                            <span class="stat__number">48h</span>
+                            <span class="stat__label">DE CÓDIGO</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="#register" class="button button--neon fade-in">HACKEA AHORA →</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section">
+        <!-- About Section -->
+        <section id="about" class="section section--about">
             <div class="container">
                 <h2 class="section__title">Sobre el evento</h2>
                 <div class="about__grid">
@@ -54,7 +108,8 @@
             </div>
         </section>
 
-        <section id="schedule" class="section section--alt">
+        <!-- Schedule Section -->
+        <section id="schedule" class="section section--schedule">
             <div class="container">
                 <h2 class="section__title">Agenda</h2>
                 <div class="timeline">
@@ -77,5 +132,10 @@
             </div>
         </section>
     </main>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/mobile-menu.js"></script>
 </body>
 </html>
