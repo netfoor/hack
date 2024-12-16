@@ -1,0 +1,134 @@
+/* About Section Styles */
+.section--about {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__subtitle {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: var(--spacing-xl);
+}
+
+.about__card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.about__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.card__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    stroke: #6366f1;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.card__description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Hover Effects */
+.about__card:hover .card__icon {
+    background: rgba(99, 102, 241, 0.2);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.about__card:hover .icon {
+    stroke: #8b5cf6;
+}
+
+/* Animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .section--about {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .about__card {
+        padding: 1.5rem;
+    }
+
+    .card__icon {
+        width: 48px;
+        height: 48px;
+    }
+}

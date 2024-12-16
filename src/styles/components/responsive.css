@@ -1,0 +1,14 @@
+/* src/styles/components/responsive.css */
+@media (max-width: 768px) {
+    .grid-pattern {
+        opacity: 0.05;
+    }
+
+    #particles-js {
+        opacity: 0.3;
+    }
+
+    .hero__background {
+        transform: scale(1.5);
+    }
+}

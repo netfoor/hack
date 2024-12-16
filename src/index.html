@@ -1,31 +1,265 @@
-<!-- src/index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathon 2024</title>
+    <title>HackUTP</title>
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/hero.css">
+    <link rel="stylesheet" href="styles/components/about.css">
+    <link rel="stylesheet" href="styles/components/timeline.css">
+    <link rel="stylesheet" href="styles/components/animations.css">
+    <link rel="stylesheet" href="styles/components/responsive.css">
+    <link rel="stylesheet" href="styles/components/timeline.css">
+    <link rel="stylesheet" href="styles/components/faq.css">
+    <link rel="stylesheet" href="styles/components/partners.css">
+
+        <!-- Agregar al head -->
+    <meta name="description" content="Hack UTP 2025 - 48 horas de innovación y tecnología">
+    <meta property="og:title" content="Hack UTP 2025">
+    <meta property="og:description" content="El hackathon más grande de la UTP">
+    <meta property="og:image" content="URL-de-tu-imagen">
 </head>
 <body>
+    <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav__logo">Hackathon 2024</div>
+        <nav class="nav container">
+            <!-- Logo -->
+            <a href="#" class="nav__logo"><img src="images/logo.png" alt=""></a>
+            <!-- Menu Desktop -->
             <div class="nav__menu">
                 <a href="#about">Sobre el evento</a>
                 <a href="#schedule">Agenda</a>
                 <a href="#prizes">Premios</a>
-                <a href="#register" class="button">Registro</a>
+                <a href="#partners">Partners</a>
+                <a href="#faq">FAQ</a>
+                <a href="#register" class="button button--primary">Registro</a>
             </div>
+
+            <!-- Menu Mobile Button -->
+            <button class="nav__mobile-button" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="nav__mobile">
+            <a href="#about">Sobre el evento</a>
+            <a href="#schedule">Agenda</a>
+            <a href="#prizes">Premios</a>
+            <a href="#partners">Partners</a>
+            <a href="#faq">FAQ</a>
+            <a href="#register" class="button button--primary">Registro</a>
+        </div>
     </header>
 
     <main>
-        <section id="hero" class="hero">
-            <h1>Hackathon 2024</h1>
-            <p>Construye el futuro en 48 horas</p>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero__background">
+                <div class="grid-pattern"></div>
+                <div id="particles-js"></div>
+            </div>
+            <div class="hero__wrapper">
+                <div class="hero__content container">
+                    <div class="tech-badge">
+                        <span>14 y 15 de Marzo de 2025</span>
+                    </div>
+                    <h1 class="hero__title fade-in">Hackathon UTP 2025</h1>
+                    <p class="hero__subtitle slide-up">48 horas para crear el futuro</p>
+                    <div class="hero__stats">
+                        <div class="stat fade-in">
+                            <span class="stat__number">$50K</span>
+                            <span class="stat__label">EN PREMIOS</span>
+                        </div>
+                        <div class="stat fade-in">
+                            <span class="stat__number">100+</span>
+                            <span class="stat__label">HACKERS</span>
+                        </div>
+                        <div class="stat fade-in">
+                            <span class="stat__number">48h</span>
+                            <span class="stat__label">DE CÓDIGO</span>
+                        </div>
+                    </div>
+                    <a href="#register" class="button button--neon">HACKEA AHORA →</a>
+                </div>
+            </div>
         </section>
+
+        <!-- About Section -->
+        <section id="about" class="section section--about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title fade-in">Sobre el evento</h2>
+                    <p class="section__subtitle slide-up">Una experiencia única de innovación y tecnología <br> El primer Hackathon de la <span>Universidad Tecnologica de Puebla</span> organizado por y para entusiastas de la tecnologia </p>
+                </div>
+                <div class="about__grid">
+                    <div class="about__card fade-in">
+                        <div class="card__icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v6m0 12v2M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m12 0h2M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24" />
+                            </svg>
+                        </div>
+                        <h3 class="card__title">48 Horas</h3>
+                        <p class="card__description">De innovación y creatividad sin límites. Transforma tus ideas en realidad</p>
+                    </div>
+
+                    <div class="about__card fade-in">
+                        <div class="card__icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm13-4a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 4a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Mentores</h3>
+                        <p class="card__description">Expertos de la industria para guiarte en cada paso del camino</p>
+                    </div>
+
+                    <div class="about__card fade-in">
+                        <div class="card__icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Networking</h3>
+                        <p class="card__description">Conecta con otros desarrolladores y expande tu red profesional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="schedule" class="section section--timeline">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title fade-in">Agenda</h2>
+                    <p class="section__subtitle slide-up">Todo lo que sucederá durante el evento</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline__item fade-in">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3>Día 1 - Inicio</h3>
+                            <time>15 DIC - 9:00 AM</time>
+                            <p>Registro de participantes y formación de equipos</p>
+                            <ul>
+                                <li>Ceremonia de apertura</li>
+                                <li>Presentación de retos</li>
+                                <li>Networking inicial</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item fade-in">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3>Día 2 - Desarrollo</h3>
+                            <time>16 DIC - Todo el día</time>
+                            <p>Desarrollo intensivo y mentorías</p>
+                            <ul>
+                                <li>Sesiones con mentores</li>
+                                <li>Workshops técnicos</li>
+                                <li>Checkpoints de progreso</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item fade-in">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3>Día 3 - Final</h3>
+                            <time>17 DIC - 3:00 PM</time>
+                            <p>Presentaciones y premiación</p>
+                            <ul>
+                                <li>Demo de proyectos</li>
+                                <li>Evaluación del jurado</li>
+                                <li>Ceremonia de premiación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section section--faq">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title fade-in">Preguntas Frecuentes</h2>
+                    <p class="section__subtitle slide-up">Todo lo que necesitas saber sobre el evento</p>
+                </div>
+
+                <div class="faq__grid">
+                    <div class="faq__item fade-in">
+                        <div class="faq__question">
+                            <h3>¿Quién puede participar?</h3>
+                            <button class="faq__toggle" aria-label="Toggle answer">
+                                <span class="icon">+</span>
+                            </button>
+                        </div>
+                        <div class="faq__answer">
+                            <p>Desarrolladores, diseñadores y creativos de todos los niveles. No importa si eres estudiante o profesional.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item fade-in">
+                        <div class="faq__question">
+                            <h3>¿Necesito un equipo?</h3>
+                            <button class="faq__toggle" aria-label="Toggle answer">
+                                <span class="icon">+</span>
+                            </button>
+                        </div>
+                        <div class="faq__answer">
+                            <p>Puedes registrarte individualmente y formar equipo durante el evento, o venir con tu equipo ya formado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Más preguntas... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="partners" class="section section--partners">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title fade-in">Red de organizadores y aliados</h2>
+                    <p class="section__subtitle slide-up">Empresas que hacen posible este evento</p>
+                </div>
+
+                <div class="partners__grid">
+                    <a href="" class="partner__item fade-in">
+                        <img src="images/aws.png" alt="AWS" class="partner__logo">
+                        <img src="images/aws0.png" alt="AWS" class="partner__logo partner__logo--hover">
+                    </a>
+                    <a href="" class="partner__item fade-in">
+                        <img src="images/0github.png" alt="Github" class="partner__logo">
+                        <img src="images/github.png" alt="Github" class="partner__logo partner__logo--hover">
+                    </a>
+                    <a href="" class="partner__item fade-in">
+                        <img src="images/0notion.png" alt="UTP" class="partner__logo">
+                        <img src="images/notion.png" alt="UTP" class="partner__logo partner__logo--hover">
+                    </a>
+                    <a href="" class="partner__item fade-in">
+                        <img src="images/0ellucian.png" alt="UTP" class="partner__logo">
+                        <img src="images/ellucian.png" alt="UTP" class="partner__logo partner__logo--hover">
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/faq.js"></script>
+    
 </body>
 </html>
