@@ -1,0 +1,113 @@
+/* styles/components/venue.css */
+.section--venue {
+    background: var(--bg-color);
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.venue__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.venue__info {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.venue__info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.venue__description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.venue__features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.venue__features li {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.venue__features .icon {
+    color: var(--primary-color);
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.venue__address {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.venue__address p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.button--venue {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.button--venue:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.venue__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.venue__map {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.venue__map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .venue__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .venue__map {
+        min-height: 300px;
+    }
+}
